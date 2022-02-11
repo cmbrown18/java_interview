@@ -6,7 +6,7 @@ public class StringReverse {
      *  I came up with first.
      */
     public String reverse(String toReverse){
-        String temp = toReverse.toLowerCase();
+        String temp = toReverse;
         char[] tempChar = temp.toCharArray();
         char[] reverseChar = new char[tempChar.length];
 
