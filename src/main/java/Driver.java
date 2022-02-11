@@ -31,5 +31,12 @@ public class Driver {
             System.out.println("Original: " + strings2[i] + " Reverse: " + reversal.reverse(strings2[i]));
             System.out.println("Is a palindrome: " + strings2[i].equalsIgnoreCase(reversal.reverse(strings2[i])));
         }
+
+        String anagram1 = "Angel";
+        String anagram2 = "Angle";
+        Anagrams test2 = new Anagrams();
+
+        System.out.println("\n########## TESTING ANAGRAMS ##########");
+        System.out.println(anagram1 + " and " + anagram2 + " are anagrams? " + test2.checkAnagram(anagram1, anagram2));
     }
 }
