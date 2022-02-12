@@ -86,5 +86,19 @@ public class Driver {
             System.out.println("Are " + rotate1[1] + " and " + rotate2[i] +
                     " rotations of each other? " + test4.checkRotation(rotate1[i], rotate2[i]));
         }
+
+        //Checking for duplicate characters
+
+        String[] duplicates = new String[3];
+        duplicates[0] = "Chris";
+        duplicates[1] = "Check";
+        duplicates[2] = "Sage";
+
+        Duplicate test5 = new Duplicate();
+        System.out.println("\n########## TESTING DUPLICATES ##########");
+        for(String s : duplicates ){
+            test5.findDupicate(s);
+        }
+
     }
 }
