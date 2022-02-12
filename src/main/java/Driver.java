@@ -68,5 +68,23 @@ public class Driver {
         for (String s : unique) {
             System.out.println("Is " + s + " unique? " + test3.unique(s));
         }
+
+        //Checking if one string is a rotation of the other one
+        String[] rotate1 = new String[3];
+        String[] rotate2 = new String[3];
+
+        rotate1[0] = "ChrisBrown";
+        rotate1[1] = "RustyandSage";
+        rotate1[2] = "Comingupwiththesearehard";
+        rotate2[0] = "BrownChris";
+        rotate2[1] = "SageandRusty";
+        rotate2[2] = "hardComingupwith";
+        Rotation test4 = new Rotation();
+        System.out.println("\n########## TESTING ROTATION ##########");
+
+        for(int i = 0; i < rotate1.length; i++){
+            System.out.println("Are " + rotate1[1] + " and " + rotate2[i] +
+                    " rotations of each other? " + test4.checkRotation(rotate1[i], rotate2[i]));
+        }
     }
 }
