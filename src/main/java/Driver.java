@@ -17,7 +17,7 @@ public class Driver {
             System.out.println("Original: " + strings[i] + " Reverse: " + reversal.reverse(strings[i]));
         }
 
-        //Check if a string is a palindrome, using the reverse method above
+        //Check if a string is a palindrome, using the reverse method above, not case-sensitive
         String[] strings2 = new String[6];
         strings2[0] = "hannah";
         strings2[1] = "table";
@@ -32,6 +32,7 @@ public class Driver {
             System.out.println("Is a palindrome: " + strings2[i].equalsIgnoreCase(reversal.reverse(strings2[i])));
         }
 
+        //Checking if two strings are anagrams of each other
         String[] anagram1 = new String[5];
         String[] anagram2 = new String[5];
         anagram1[0] = "Angel";
@@ -51,6 +52,21 @@ public class Driver {
             System.out.println(anagram1[i] + " and " + anagram2[i] + " are anagrams? " +
                     test2.checkAnagram(anagram1[i], anagram2[i]));
 
+        }
+
+
+        //Checking if a string has all unique characters
+        String[] unique = new String[5];
+        unique[0] = "Chris";
+        unique[1] = "Christopher";
+        unique[2] = "Rusty";
+        unique[3] = "Hannah";
+        unique[4] = "Thisisachecktoseehowlongitruns";
+        Uniqueness test3 = new Uniqueness();
+
+        System.out.println("\n########## TESTING UNIQUENESS ##########");
+        for (String s : unique) {
+            System.out.println("Is " + s + " unique? " + test3.unique(s));
         }
     }
 }
