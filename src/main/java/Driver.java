@@ -1,7 +1,7 @@
 public class Driver {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //Reverse a String without using the builtins
         StringReverse reversal = new StringReverse();
@@ -13,7 +13,7 @@ public class Driver {
         strings[4] = "Random";
 
         System.out.println("########## TESTING REVERSAL ##########");
-        for(int i = 0; i < strings.length; i++){
+        for (int i = 0; i < strings.length; i++) {
             System.out.println("Original: " + strings[i] + " Reverse: " + reversal.reverse(strings[i]));
         }
 
@@ -27,16 +27,30 @@ public class Driver {
         strings2[5] = "random";
 
         System.out.println("\n########## TESTING PALINDROME ##########");
-        for(int i = 0; i < strings2.length; i++){
+        for (int i = 0; i < strings2.length; i++) {
             System.out.println("Original: " + strings2[i] + " Reverse: " + reversal.reverse(strings2[i]));
             System.out.println("Is a palindrome: " + strings2[i].equalsIgnoreCase(reversal.reverse(strings2[i])));
         }
 
-        String anagram1 = "Angel";
-        String anagram2 = "Angle";
+        String[] anagram1 = new String[5];
+        String[] anagram2 = new String[5];
+        anagram1[0] = "Angel";
+        anagram1[1] = "Oh";
+        anagram1[2] = "Arc";
+        anagram1[3] = "Bar";
+        anagram1[4] = "Who";
+        anagram2[0] = "Angel";
+        anagram2[1] = "No";
+        anagram2[2] = "Car";
+        anagram2[3] = "Something";
+        anagram2[4] = "How";
         Anagrams test2 = new Anagrams();
 
         System.out.println("\n########## TESTING ANAGRAMS ##########");
-        System.out.println(anagram1 + " and " + anagram2 + " are anagrams? " + test2.checkAnagram(anagram1, anagram2));
+        for (int i = 0; i < anagram1.length; i++) {
+            System.out.println(anagram1[i] + " and " + anagram2[i] + " are anagrams? " +
+                    test2.checkAnagram(anagram1[i], anagram2[i]));
+
+        }
     }
 }
