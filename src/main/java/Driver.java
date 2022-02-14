@@ -1,4 +1,5 @@
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Set;
 
 public class Driver {
@@ -144,5 +145,38 @@ public class Driver {
                 System.out.println(returnedString);
             }
         }
+
+        System.out.println("########## NOW TESTING ARRAYS ##########\n\n\n");
+
+        System.out.println("\n########## LARGEST OR SMALLEST ##########");
+
+        Random random = new Random();
+        Arrays test9 = new Arrays();
+        int[] ints = new int[10];
+        int count = 10;
+        for(int i = 0; i < count; i++){
+            for(int j = 0; j < 10; j++){
+                ints[j] = random.nextInt(100);
+            }
+            System.out.print("The array is: ");
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
+            }
+            System.out.println("\nThe largest number: " + test9.smallestOrLargest(ints, "-l"));
+        }
+
+        for(int i = 0; i < count; i++){
+            for(int j = 0; j < 10; j++){
+                ints[j] = random.nextInt(100);
+            }
+            System.out.print("The array is: ");
+            for(int anInt : ints){
+                System.out.print(anInt + " ");
+            }
+            System.out.println("\nThe smallest number: " + test9.smallestOrLargest(ints, "-s"));
+        }
+
+
+
     }
 }
