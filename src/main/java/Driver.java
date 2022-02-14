@@ -118,5 +118,12 @@ public class Driver {
             test6.findSubStrings(s);
             System.out.println("\n");
         }
+
+        System.out.println("\n########## TESTING STRING LENGTH ##########");
+        StringLength test7 = new StringLength();
+        for(String s : subStrings){
+            System.out.println("Length of " + s + " is " + test7.counting(s));
+
+        }
     }
 }
