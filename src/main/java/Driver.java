@@ -101,9 +101,22 @@ public class Driver {
             test5.findDuplicate(s);
         }
 
-        System.out.println("\n########## TESTING DUPLICATES ##########");
+        System.out.println("\n########## TESTING NON DUPLICATE ##########");
         for(String s : duplicates){
             System.out.println("The first non-repeated character in " + s + " is: " + test5.findNonDuplicate(s));
+        }
+
+        System.out.println("\n########## TESTING SUBSTRINGS ##########");
+        String[] subStrings = new String[4];
+        subStrings[0] = "abbc";
+        subStrings[1] = "ababa";
+        subStrings[2] = "abcabc";
+        subStrings[3] = "asa";
+
+        Substrings test6 = new Substrings();
+        for(String s : subStrings){
+            test6.findSubStrings(s);
+            System.out.println("\n");
         }
     }
 }
