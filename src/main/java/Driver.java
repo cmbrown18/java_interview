@@ -187,5 +187,12 @@ public class Driver {
         ints1[9579] = 10001;
         System.out.println("The missing number is: " + test9.findMissing(ints1));
 
+        System.out.println("\n########## FIND ELEMENT IN ROTATED SORTED ARRAY");
+
+        int[] array = {16,19,21,25,3,5,8,10};
+        int[] array1 = {3,4,10,13,17,19,22};
+
+        System.out.println("Index of Element 5 : " + test9.findElement(array, 0, array.length-1, 16));
+        System.out.println("Index of Element 5 : " + test9.findElement(array1, 0, array1.length-1, 22));
     }
 }
