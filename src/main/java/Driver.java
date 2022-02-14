@@ -146,7 +146,7 @@ public class Driver {
             }
         }
 
-        System.out.println("########## NOW TESTING ARRAYS ##########\n\n\n");
+        System.out.println("\n\n########## NOW TESTING ARRAYS ##########\n\n\n");
 
         System.out.println("\n########## LARGEST OR SMALLEST ##########");
 
@@ -176,7 +176,16 @@ public class Driver {
             System.out.println("\nThe smallest number: " + test9.smallestOrLargest(ints, "-s"));
         }
 
+        System.out.println("\n########## FINDING MISSING NUMBER ###########\n");
+        int[] ints1 = new int[10000];
+        int counter = 0;
+        while(counter < 10000){
+            ints1[counter] = counter;
+            counter++;
+        }
 
+        ints1[9579] = 10001;
+        System.out.println("The missing number is: " + test9.findMissing(ints1));
 
     }
 }

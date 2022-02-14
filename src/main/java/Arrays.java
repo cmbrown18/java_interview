@@ -23,4 +23,16 @@ public class Arrays {
         }
         return returnInt;
     }
+
+    public int findMissing(int[] intArray){
+        int missing = 1;
+        for(int i = 0; i < intArray.length; i++){
+            for(int j = 0; j < intArray.length; j++){
+                if(intArray[j] == missing){
+                    missing++;
+                }
+            }
+        }
+        return missing;
+    }
 }
