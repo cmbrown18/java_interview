@@ -1,3 +1,6 @@
+import java.util.Iterator;
+import java.util.Set;
+
 public class Driver {
 
 
@@ -123,7 +126,23 @@ public class Driver {
         StringLength test7 = new StringLength();
         for(String s : subStrings){
             System.out.println("Length of " + s + " is " + test7.counting(s));
+        }
 
+        System.out.println("\n########## TESTING PERMUTATIONS ###########");
+
+        String[] permutations = new String[3];
+        permutations[0] = "ABC";
+        permutations[1] = "DEF";
+        permutations[2] = "GHI";
+
+        Permutations test8 = new Permutations();
+
+        for(String s : permutations) {
+            Set<String> returned = test8.permutationOfStrings(s);
+            for(Iterator iterator = returned.iterator(); iterator.hasNext();){
+                String returnedString = (String)iterator.next();
+                System.out.println(returnedString);
+            }
         }
     }
 }
