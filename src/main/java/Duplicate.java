@@ -1,10 +1,12 @@
 import java.util.HashMap;
 import java.util.ArrayList;
-import java.util.Locale;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+
 
 public class Duplicate {
 
-    public void findDupicate(String toFind){
+    public void findDuplicate(String toFind){
         HashMap<Character, Integer> charMap = new HashMap<>();
 
         for(int i = 0; i < toFind.length(); i++){
@@ -27,5 +29,27 @@ public class Duplicate {
         if(duplicates.isEmpty()){
             System.out.println("No duplcaite characters in " + toFind);
         }
+    }
+
+    public Character findNonDuplicate(String toFind){
+        LinkedHashMap<Character, Integer> hashMap = new LinkedHashMap<>();
+        Character toReturn = null;
+        for(int i = 0; i < toFind.length(); i++){
+            Character c = toFind.toLowerCase().charAt(i);
+
+            if(hashMap.containsKey(c)){
+                hashMap.put(c, hashMap.get(c) + 1);
+            }else{
+                hashMap.put(c, 1);
+            }
+        }
+
+        for(Entry<Character, Integer> e : hashMap.entrySet()){
+            if(e.getValue() == 1){
+                toReturn = e.getKey();
+                break;
+            }
+        }
+        return toReturn;
     }
 }

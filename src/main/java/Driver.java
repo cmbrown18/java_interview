@@ -89,16 +89,21 @@ public class Driver {
 
         //Checking for duplicate characters
 
-        String[] duplicates = new String[3];
+        String[] duplicates = new String[4];
         duplicates[0] = "Chris";
         duplicates[1] = "Check";
         duplicates[2] = "Sage";
+        duplicates[3] = "Christopher";
 
         Duplicate test5 = new Duplicate();
         System.out.println("\n########## TESTING DUPLICATES ##########");
         for(String s : duplicates ){
-            test5.findDupicate(s);
+            test5.findDuplicate(s);
         }
 
+        System.out.println("\n########## TESTING DUPLICATES ##########");
+        for(String s : duplicates){
+            System.out.println("The first non-repeated character in " + s + " is: " + test5.findNonDuplicate(s));
+        }
     }
 }
