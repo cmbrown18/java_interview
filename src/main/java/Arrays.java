@@ -73,4 +73,34 @@ public class Arrays {
         }
         return -1;
     }
+
+    public int findMinimum(int[] array, int low, int high){
+        int mid;
+        while(low<high) {
+            mid = low + ((high - low) / 2);
+
+            if (array[mid] > array[high]) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+        }
+        return array[low];
+        }
+
+    public int findSecondLargest(int[] array){
+        int highest = Integer.MIN_VALUE;
+        int secondHigh = Integer.MIN_VALUE;
+
+        for(int i = 0; i < array.length; i++){
+            if(array[i] > highest){
+                secondHigh = highest;
+                highest = array[i];
+
+            }else if(array[i] > secondHigh && array[i] != highest){
+                secondHigh = array[i];
+            }
+        }
+        return secondHigh;
+    }
 }

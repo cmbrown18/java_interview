@@ -190,9 +190,19 @@ public class Driver {
         System.out.println("\n########## FIND ELEMENT IN ROTATED SORTED ARRAY");
 
         int[] array = {16,19,21,25,3,5,8,10};
-        int[] array1 = {3,4,10,13,17,19,22};
+        int[] array1 = {4,10,13,17,19,22};
 
         System.out.println("Index of Element 5 : " + test9.findElement(array, 0, array.length-1, 16));
         System.out.println("Index of Element 5 : " + test9.findElement(array1, 0, array1.length-1, 22));
+
+        System.out.println("\n########## FIND MINIMUM ELEMENT IN ROTATED SORTED ARRAY ###########");
+
+        System.out.println("Minimum element in the array: " + test9.findMinimum(array, 0, array.length-1));
+        System.out.println("Minimum element in the array: " + test9.findMinimum(array1, 0, array1.length-1));
+
+        System.out.println("\n########## FIND SECOND HIGHEST NUMBER ###########");
+
+        System.out.println("Minimum element in the array: " + test9.findSecondLargest(array));
+        System.out.println("Minimum element in the array: " + test9.findSecondLargest(array1));
     }
 }
